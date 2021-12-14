@@ -11,10 +11,11 @@ class CardRecyclerAdapter internal constructor(context: Context) :
     RecyclerView.Adapter<CardRecyclerAdapter.MessageViewHolder>() {
 
     private val inflater: LayoutInflater = LayoutInflater.from(context)
-    private var numberList = emptyList<Int>() // Cached copy of words
+    private var numberList = emptyList<Message>() // Cached copy of words
 
     inner class MessageViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val messageItemView: TextView = itemView.findViewById(R.id.info_text)
+        val messageContentView: TextView = itemView.findViewById(R.id.info_text)
+        val messageWriterView: TextView = itemView.findViewById(R.id.text_writer)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MessageViewHolder {
@@ -24,18 +25,17 @@ class CardRecyclerAdapter internal constructor(context: Context) :
 
     override fun onBindViewHolder(holder: MessageViewHolder, position: Int) {
         val current = numberList[position]
-        holder.messageItemView.text = current.toString()
+        holder.messageContentView.text = current.content
+        holder.messageWriterView.text = current.writerName
     }
 
     // Adapter内の numberリストに代入する
-    internal fun setList(numbers: List<Int>) {
-        this.numberList = numbers
+    internal fun setList(msgData: List<Message>) {
+        this.numberList = msgData
         notifyDataSetChanged()
     }
 
     override fun getItemCount(): Int {
         return numberList.size
     }
-
-
 }

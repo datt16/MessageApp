@@ -16,7 +16,7 @@ class MainActivity : AppCompatActivity() {
         recyclerView.adapter = adapter
         recyclerView.layoutManager = LinearLayoutManager(this)
 
-        val numbers = listOf<Int>(0, 1, 2, 3)
-        adapter.setList(numbers)
+        val msgData = listOf<Message>(Message("User1", "Hello, World"), Message("User2", "Hello, Kotlin"))
+        adapter.setList(msgData)
     }
 }
