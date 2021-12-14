@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "881379963833",
+    "project_id": "messageapp-4f1a8",
+    "storage_bucket": "messageapp-4f1a8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:881379963833:android:fa8c75fee253cda948bc68",
+        "android_client_info": {
+          "package_name": "io.github.datt16.msg"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "881379963833-cnuevnrach34t1seasc20qmpv4qb38q8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDFb3U6VkGincdyZt0VP3E0GXb-xg0G4pU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "881379963833-cnuevnrach34t1seasc20qmpv4qb38q8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -18,5 +18,8 @@ class MainActivity : AppCompatActivity() {
 
         val msgData = listOf<Message>(Message("User1", "Hello, World"), Message("User2", "Hello, Kotlin"))
         adapter.setList(msgData)
+
+//        val fs = Firestore(this)
+//        fs.setSampleData(this)
     }
 }
