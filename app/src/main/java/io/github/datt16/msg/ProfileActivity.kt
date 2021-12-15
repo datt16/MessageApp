@@ -29,7 +29,7 @@ class ProfileActivity : AppCompatActivity() {
     private fun checkUser() {
         val firebaseUser = firebaseAuth.currentUser
         if (firebaseUser == null) {
-            startActivity(Intent(this, LoginActivity::class.java))
+            startActivity(Intent(this, GoogleLoginActivity::class.java))
             finish()
         } else {
             val email = firebaseUser.email
