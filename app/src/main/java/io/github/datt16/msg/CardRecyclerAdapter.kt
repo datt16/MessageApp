@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import io.github.datt16.msg.model.Message
 
 class CardRecyclerAdapter internal constructor(context: Context) :
     RecyclerView.Adapter<CardRecyclerAdapter.MessageViewHolder>() {

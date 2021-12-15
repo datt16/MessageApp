@@ -1,8 +1,7 @@
-package io.github.datt16.msg
+package io.github.datt16.msg.model
 
 import android.util.Log
 import com.google.firebase.firestore.FirebaseFirestore
-import java.lang.Exception
 
 
 class MessageRepository {

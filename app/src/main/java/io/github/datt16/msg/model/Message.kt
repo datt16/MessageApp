@@ -1,4 +1,4 @@
-package io.github.datt16.msg
+package io.github.datt16.msg.model
 
 data class Message(
     val id: String,
