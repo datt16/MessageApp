@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    tools:context=".SignUpActivity">
+
+    <TextView
+        android:id="@+id/titleTv"
+        style="@style/TextAppearance.AppCompat.Display1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SignUp" />
+
+    <TextView
+        android:id="@+id/descriptionTv"
+        style="@style/TextAppearance.AppCompat.Caption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/titleTv"
+        android:text="アカウントを作成します。" />
+
+    <!--    Email   -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/emailTil"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/passwordTil">
+
+        <EditText
+            android:id="@+id/emailEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="メールアドレス"
+            android:inputType="textEmailAddress" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!--    PW   -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/passwordTil"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        app:passwordToggleEnabled="true">
+
+        <EditText
+            android:id="@+id/passwordEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="パスワード"
+            android:inputType="textPassword" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!--    SubmitBtn   -->
+    <Button
+        android:id="@+id/SignUpBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/passwordTil"
+        android:text="アカウント作成" />
+
+    <!--    Information   -->
+    <TextView
+        style="@style/TextAppearance.AppCompat.Caption"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="@string/already_signup"
+        android:textAlignment="center" />
+
+</RelativeLayout>
