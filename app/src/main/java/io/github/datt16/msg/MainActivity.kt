@@ -13,13 +13,15 @@ class MainActivity : AppCompatActivity() {
         val recyclerView = findViewById<RecyclerView>(R.id.recycler_view)
         val adapter = CardRecyclerAdapter(this)
 
+        val repo = MessageRepository()
+
         recyclerView.adapter = adapter
         recyclerView.layoutManager = LinearLayoutManager(this)
 
-        val msgData = listOf<Message>(Message("User1", "Hello, World"), Message("User2", "Hello, Kotlin"))
+        val msgData = listOf(Message("0","User1", "Hello, World"), Message("1","User2", "Hello, Kotlin"))
         adapter.setList(msgData)
 
-//        val fs = Firestore(this)
-//        fs.setSampleData(this)
+        val sampleMsg = Message("0", "User1", "Hello, Firestore")
+        repo.add(sampleMsg)
     }
 }
